@@ -1,0 +1,2 @@
+# Ignore tmux resurrect session data
+tmux/.tmux/resurrect/
