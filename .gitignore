@@ -1,4 +1,9 @@
-# Ignore tmux resurrect session data
+#tmux ignores
 tmux/.tmux/resurrect/
+tmux/.tmux/resurrect.zip
+tmux/.tmux/resurrect.bak
+tmux/.tmux/plugins/
+tmux/.tmux/resurrect-last
+
 
 .DS_Store
