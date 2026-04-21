@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git virtualenv)
 plugins+=(zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
@@ -12,6 +12,8 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/uew.omp.json)"
 
 #Aliases
+alias cd..="cd .."
+
 alias zshs="source ~/.zshrc"
 
 alias idfs="source ~/esp/esp-idf-v5.4/export.sh"
@@ -28,5 +30,14 @@ alias openocd="/Users/simonulmer/.espressif/tools/openocd-esp32/v0.12.0-esp32-20
 alias openocdc6='openocd -f board/esp32c6-builtin.cfg'
 alias openocdc3='openocd -f board/esp32c3-builtin.cfg'
 
-export PATH="/usr/local/Cellar/llvm/19.1.7_1/bin:$PATH"
+alias matlab='/Applications/MATLAB_R2025b.app/bin/matlab -nojvm -nodesktop'
 
+export PATH="/usr/local/Cellar/llvm/19.1.7_1/bin:$PATH"
+export PATH="/usr/local/opt/mosquitto/sbin:$PATH"
+
+export PATH="$(brew --prefix python@3.12)/bin:$PATH"
+export ZEPHYR_BASE="$HOME/zephyrproject/zephyr"
+alias  zs="source ~/zephyrproject/.venv/bin/activate"
+
+# OpenClaw Completion
+source "/Users/simonulmer/.openclaw/completions/openclaw.zsh"
